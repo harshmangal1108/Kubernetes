@@ -16,3 +16,9 @@ $~kubectl get node
 ```bash
 kubectl cluster-info
 ```
+##### Running a POD
+```bash
+$~kubectl create -f podfile.yml
+##check status
+$~kubectl get pods
+```
