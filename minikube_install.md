@@ -1,5 +1,5 @@
 ### Minikube Installation in Linux
-### We can assume minikube as automatic ***Kubernetes*** installer
+### We can assume **minikube** as automatic ***Kubernetes*** installer
 ```bash
 833  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
   835  mv minikube /usr/bin/
