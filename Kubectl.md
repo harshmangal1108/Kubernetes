@@ -11,3 +11,8 @@ chmod +x /usr/bin/kubectl
 $~kubectl version
 #To Check Number of Nodes
 $~kubectl get node
+```
+##### Check that kubectl is correctly installed and configured by running the kubectl cluster-info command:
+```bash
+kubectl cluster-info
+```
