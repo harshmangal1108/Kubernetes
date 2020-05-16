@@ -33,3 +33,19 @@ $~kubectl delete pod podname
 ##rather than get pod we can use describe for detailed infomation
 $~kubectl describe pods podname
 ```
+##### Getting Help from kubectl
+```bash
+$~kubectl explain pods | less
+#for API Version
+$~kubectl explain pods.apiVersion | less
+## for metadata
+$~kubectl explain pods.metadata | less
+## also for particular field like container in Specs
+$~kubectl explain pods.spec.containers
+$~kubectl explain pods.spec.containers.ports ##now also ports inside containers
+```
+##### Auto generate yml file 
+```bash
+$~kubectl run hpod2 --image=nginx --dry-run -o yaml >harshpod2.yml
+## here dry run will only check not actually create a pod and -o means output that is in 'yml' file 
+```
