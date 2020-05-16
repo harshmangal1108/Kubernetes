@@ -46,6 +46,6 @@ $~kubectl explain pods.spec.containers.ports ##now also ports inside containers
 ```
 ##### Auto generate yml file 
 ```bash
-$~kubectl run hpod2 --image=nginx --dry-run -o yaml >harshpod2.yml
+$~kubectl run hpod2 --image=nginx --dry-run --port  80 -o yml >harshpod2.yml
 ## here dry run will only check not actually create a pod and -o means output that is in 'yml' file 
 ```
