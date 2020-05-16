@@ -21,4 +21,6 @@ kubectl cluster-info
 $~kubectl create -f podfile.yml
 ##check status
 $~kubectl get pods
+#-w for watching live
+$~kubectl get pods -w 
 ```
