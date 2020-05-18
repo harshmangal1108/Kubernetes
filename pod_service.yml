@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: myservice1
+spec: ##here will not write containers..
+ ports:
+  - name: myserviceport #optional becz we can have multiple ports so to differentiate all
+    port: 1123 #this is must and is port of that Serivce IP
+    targetPort: 80 ## this must match the port number of POD
+    protocol: TCP ##Optional
+ selector: #it is one who matches with label 
+  x: plabel1 # this label msut be same as pod label where we want to forward traffic..
+ type: NodePort ###among types of service
