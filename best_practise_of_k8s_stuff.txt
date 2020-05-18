@@ -1,0 +1,15 @@
+best practise
+1. create a pod and give label
+2. create service of node port type  np will generate some port number that we can use with master/worker node
+3.genrate file using auto yml gnerator
+
+
+
+Practical
+kubectl run podtest1 --image=nginx --port 80 --restart Never --dry-run -o yaml>podtest1.yml
+kubectl create -f podtest1.yml
+##service
+kubectl create service nodeport mypod1_service1 --tcp 80 --dry-run -o yaml >service.yml
+## before deploying it check label
+kubectl get svc
+## modfiy in service file at "selector: next line"
